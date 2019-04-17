@@ -40,13 +40,14 @@ TEST(PriorityQueueTest,Trivial){
 	
 	ASSERT_TRUE(expTarget.empty());
 	
-	/* Fail Example - If you activate this code, Test will be fail *
+#ifdef 	_FAIL_EXAMPLE_
+	//Fail Example - If you activate this code, Test will be fail
 
 	expTarget.pop();
 	
 	EXPECT_TRUE(expTarget.empty()); // non-Fatal Failure - not terminate this test case when result of empty method is false.
-	ASSERT_EQ(expTarget.size(),0);
-        /**/
+	ASSERT_EQ(expTarget.size(),0);        
+#endif
 	
 }
 
